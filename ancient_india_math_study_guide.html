@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mathematics in Ancient India — Study Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Mono:wght@400;500&family=Crimson+Pro:ital,wght@0,300;0,400;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --saffron: #C8620A;
+    --gold: #D4A017;
+    --deep: #1A0E00;
+    --parchment: #FAF3E3;
+    --warm-white: #FEF9F0;
+    --ink: #2C1810;
+    --muted: #8B6E52;
+    --border: #E8D5B0;
+    --accent-light: #FFF3D6;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--parchment);
+    color: var(--ink);
+    font-family: 'Crimson Pro', Georgia, serif;
+    font-size: 17px;
+    line-height: 1.7;
+    min-height: 100vh;
+  }
+
+  /* Decorative top band */
+  .top-band {
+    background: var(--deep);
+    padding: 10px 0;
+    text-align: center;
+    letter-spacing: 4px;
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--gold);
+    text-transform: uppercase;
+  }
+
+  /* Hero */
+  .hero {
+    background: var(--deep);
+    padding: 60px 40px 50px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 30% 50%, rgba(200,98,10,0.15) 0%, transparent 60%),
+                radial-gradient(ellipse at 70% 50%, rgba(212,160,23,0.12) 0%, transparent 60%);
+  }
+
+  .hero-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 5px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .hero-label::before, .hero-label::after {
+    content: '';
+    width: 50px;
+    height: 1px;
+    background: var(--gold);
+    opacity: 0.5;
+  }
+
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 6vw, 64px);
+    font-weight: 300;
+    color: var(--warm-white);
+    letter-spacing: -1px;
+    line-height: 1.1;
+    position: relative;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  .hero-sub {
+    margin-top: 16px;
+    color: var(--muted);
+    font-size: 15px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: 'DM Mono', monospace;
+    position: relative;
+  }
+
+  .hero-decoration {
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+  }
+
+  .hero-line {
+    width: 100px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--saffron));
+  }
+  .hero-line.right { background: linear-gradient(to left, transparent, var(--saffron)); }
+
+  .hero-ornament {
+    width: 10px;
+    height: 10px;
+    border: 1px solid var(--saffron);
+    transform: rotate(45deg);
+  }
+
+  /* Nav */
+  .nav {
+    background: #221208;
+    padding: 0 40px;
+    display: flex;
+    gap: 0;
+    border-bottom: 2px solid var(--saffron);
+    overflow-x: auto;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .nav a {
+    color: #C4A97A;
+    text-decoration: none;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 14px 20px;
+    white-space: nowrap;
+    transition: color 0.2s, background 0.2s;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+  }
+
+  .nav a:hover {
+    color: var(--gold);
+    border-bottom-color: var(--gold);
+  }
+
+  /* Layout */
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+
+  /* Section */
+  section {
+    padding: 64px 0 48px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  section:last-child { border-bottom: none; }
+
+  .section-label {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 28px;
+  }
+
+  .section-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--saffron);
+    letter-spacing: 3px;
+  }
+
+  .section-line {
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(28px, 4vw, 40px);
+    font-weight: 600;
+    color: var(--deep);
+    letter-spacing: -0.5px;
+    line-height: 1.15;
+    margin-bottom: 20px;
+  }
+
+  h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--saffron);
+    margin: 28px 0 10px;
+  }
+
+  p {
+    color: #3D2412;
+    margin-bottom: 14px;
+  }
+
+  /* Key facts box */
+  .key-facts {
+    background: var(--accent-light);
+    border-left: 3px solid var(--saffron);
+    padding: 20px 24px;
+    margin: 24px 0;
+    border-radius: 0 6px 6px 0;
+  }
+
+  .key-facts-title {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--saffron);
+    margin-bottom: 12px;
+  }
+
+  .key-facts ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .key-facts li {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    font-size: 16px;
+  }
+
+  .key-facts li::before {
+    content: '◆';
+    color: var(--gold);
+    font-size: 8px;
+    margin-top: 7px;
+    flex-shrink: 0;
+  }
+
+  /* Mathematician cards */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .card {
+    background: var(--warm-white);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 22px 20px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: default;
+  }
+
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(200,98,10,0.1);
+  }
+
+  .card-period {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+
+  .card-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 21px;
+    font-weight: 700;
+    color: var(--deep);
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+
+  .card-contributions {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .card-contributions li {
+    font-size: 14.5px;
+    color: #4A3020;
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    line-height: 1.5;
+  }
+
+  .card-contributions li::before {
+    content: '→';
+    color: var(--saffron);
+    font-size: 12px;
+    margin-top: 3px;
+    flex-shrink: 0;
+  }
+
+  /* Timeline */
+  .timeline {
+    position: relative;
+    margin: 28px 0;
+    padding-left: 32px;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(to bottom, var(--saffron), var(--border));
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 28px;
+  }
+
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -28px;
+    top: 8px;
+    width: 8px;
+    height: 8px;
+    background: var(--saffron);
+    border-radius: 50%;
+  }
+
+  .timeline-date {
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--saffron);
+    letter-spacing: 2px;
+    margin-bottom: 4px;
+  }
+
+  .timeline-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--deep);
+  }
+
+  .timeline-desc {
+    font-size: 15px;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+
+  /* Formula highlight */
+  .formula {
+    background: var(--deep);
+    color: var(--gold);
+    font-family: 'DM Mono', monospace;
+    font-size: 14px;
+    padding: 18px 24px;
+    border-radius: 6px;
+    margin: 20px 0;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+
+  /* Quick Quiz */
+  .quiz-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 24px;
+  }
+
+  .quiz-item {
+    background: var(--warm-white);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .quiz-q {
+    padding: 16px 20px;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--deep);
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.2s;
+  }
+
+  .quiz-q:hover { background: var(--accent-light); }
+
+  .quiz-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    color: var(--saffron);
+    margin-top: 3px;
+    flex-shrink: 0;
+  }
+
+  .quiz-toggle {
+    margin-left: auto;
+    font-size: 12px;
+    color: var(--muted);
+    font-family: 'DM Mono', monospace;
+    flex-shrink: 0;
+  }
+
+  .quiz-a {
+    display: none;
+    padding: 14px 20px 16px 44px;
+    background: #FFF8ED;
+    border-top: 1px solid var(--border);
+    font-size: 15.5px;
+    color: #3D2412;
+    animation: fadeIn 0.2s ease;
+  }
+
+  .quiz-a.open { display: block; }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-4px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Summary table */
+  .summary-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 14.5px;
+  }
+
+  .summary-table th {
+    background: var(--deep);
+    color: var(--gold);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 12px 16px;
+    text-align: left;
+  }
+
+  .summary-table td {
+    padding: 11px 16px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+    color: var(--ink);
+  }
+
+  .summary-table tr:hover td { background: var(--accent-light); }
+  .summary-table tr:nth-child(even) td { background: rgba(255,255,255,0.5); }
+
+  /* Callout */
+  .callout {
+    background: var(--deep);
+    color: var(--warm-white);
+    padding: 28px 32px;
+    border-radius: 8px;
+    margin: 28px 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .callout::before {
+    content: '"';
+    position: absolute;
+    top: -20px;
+    left: 16px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 120px;
+    color: var(--saffron);
+    opacity: 0.2;
+    line-height: 1;
+  }
+
+  .callout p {
+    color: var(--warm-white);
+    font-style: italic;
+    font-size: 18px;
+    position: relative;
+    line-height: 1.6;
+  }
+
+  .callout-attr {
+    margin-top: 12px;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--gold);
+    letter-spacing: 2px;
+    position: relative;
+  }
+
+  /* Footer */
+  .footer {
+    background: var(--deep);
+    color: var(--muted);
+    text-align: center;
+    padding: 40px;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+
+  .footer span { color: var(--gold); }
+
+  /* Pill tags */
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 16px 0;
+  }
+
+  .tag {
+    background: var(--deep);
+    color: var(--gold);
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 2px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    text-transform: uppercase;
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    .container { padding: 0 20px; }
+    .hero { padding: 40px 20px; }
+    .nav { padding: 0 16px; }
+    .cards-grid { grid-template-columns: 1fr; }
+    .summary-table { font-size: 13px; }
+    .summary-table th, .summary-table td { padding: 9px 10px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="top-band">Unit 1 · GAST · Mathematics in Ancient India</div>
+
+<div class="hero">
+  <div class="hero-label">Study Guide</div>
+  <h1>Mathematics in<br><em>Ancient India</em></h1>
+  <div class="hero-sub">5000+ Years of Mathematical Heritage</div>
+  <div class="hero-decoration">
+    <div class="hero-line"></div>
+    <div class="hero-ornament"></div>
+    <div class="hero-line right"></div>
+  </div>
+</div>
+
+<nav class="nav">
+  <a href="#overview">Overview</a>
+  <a href="#zero">Zero</a>
+  <a href="#pi">Pi</a>
+  <a href="#numbers">Numbers</a>
+  <a href="#pythagoras">Pythagoras</a>
+  <a href="#vedic">Vedic Math</a>
+  <a href="#mathematicians">Mathematicians</a>
+  <a href="#kerala">Kerala School</a>
+  <a href="#quiz">Quiz</a>
+</nav>
+
+<div class="container">
+
+  <!-- OVERVIEW -->
+  <section id="overview">
+    <div class="section-label">
+      <span class="section-num">01</span>
+      <div class="section-line"></div>
+    </div>
+    <h2>Overview & Golden Age</h2>
+    <p>Indian mathematics has a history spanning over <strong>5,000 years</strong>, predating European advances and influencing civilizations across the globe — from China and Southeast Asia to the Middle East and Europe.</p>
+
+    <div class="key-facts">
+      <div class="key-facts-title">Major Contributions at a Glance</div>
+      <ul>
+        <li>Concept of <strong>Zero</strong> — invented and formalized in India</li>
+        <li><strong>Decimal place-value system</strong> — the global standard today</li>
+        <li>Advances in <strong>Geometry, Algebra, Trigonometry, Calculus</strong></li>
+        <li><strong>Binary mathematics</strong> and the notion of negative numbers</li>
+        <li>Infinite series for trigonometric functions (centuries before Europe)</li>
+      </ul>
+    </div>
+
+    <h3>The Classical / Golden Age (400–1600 CE)</h3>
+    <p>This period produced the greatest cluster of Indian mathematical talent. Key figures include Aryabhata, Varahamihira, Brahmagupta, Bhaskara I, Mahavira, Bhaskara II, Madhava of Sangamagrama, and Nilakantha Somayaji.</p>
+
+    <div class="tags">
+      <span class="tag">Arithmetic</span>
+      <span class="tag">Algebra</span>
+      <span class="tag">Geometry</span>
+      <span class="tag">Trigonometry</span>
+      <span class="tag">Calculus</span>
+      <span class="tag">Astronomy</span>
+      <span class="tag">Number Theory</span>
+    </div>
+  </section>
+
+  <!-- ZERO -->
+  <section id="zero">
+    <div class="section-label">
+      <span class="section-num">02</span>
+      <div class="section-line"></div>
+    </div>
+    <h2>The Concept of Zero</h2>
+    <p>Zero was discovered by an <strong>anonymous Indian</strong>. Its development transformed mathematics and is one of India's most profound intellectual gifts to the world.</p>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-date">2500–1500 BCE</div>
+        <div class="timeline-title">Indus Valley Civilization</div>
+        <div class="timeline-desc">Earliest recorded use of a decimal system; zero concept begins to evolve.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">476–550 CE</div>
+        <div class="timeline-title">Aryabhata</div>
+        <div class="timeline-desc">Used a symbol for zero and recognized its importance in calculations.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">598–668 CE</div>
+        <div class="timeline-title">Brahmagupta</div>
+        <div class="timeline-desc">Formally defined zero as a number; introduced rules for arithmetic with zero (addition, subtraction, etc.).</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">Middle Ages</div>
+        <div class="timeline-title">Spread to the World</div>
+        <div class="timeline-desc">Via Islamic scholars (Al-Khwarizmi), the concept reached Europe and became the foundation of modern mathematics.</div>
+      </div>
+    </div>
+
+    <div class="key-facts">
+      <div class="key-facts-title">Why Zero Matters</div>
+      <ul>
+        <li>Acts as a <strong>placeholder</strong> in the decimal system</li>
+        <li>Enables representation of numbers of <strong>varying magnitudes</strong></li>
+        <li>Essential in <strong>algebra, calculus</strong>, and virtually all modern mathematics</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PI -->
+  <section id="pi">
+    <div class="section-label">
+      <span class="section-num">03</span>
+      <div class="section-line"></div>
+    </div>
+    <h2>The Concept of Pi (π)</h2>
+    <p>Pi represents the ratio of the circumference of a circle to its diameter. Indian mathematicians contributed extensively to its approximation over many centuries.</p>
+
+    <div class="formula">π ≈ 22/7 ≈ 3.14159265359...</div>
+
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-period">~800–200 BCE</div>
+        <div class="card-name">Shulba Sutras</div>
+        <ul class="card-contributions">
+          <li>Ancient geometry texts containing early approximations of π</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-period">476–550 CE</div>
+        <div class="card-name">Aryabhata</div>
+        <ul class="card-contributions">
+          <li>Calculated π ≈ <strong>3.1416</strong> in his work Aryabhatiya</li>
+          <li>Used a geometric method to estimate the value</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-period">7th Century CE</div>
+        <div class="card-name">Bhaskara I</div>
+        <ul class="card-contributions">
+          <li>Used a polygon with <strong>384 sides</strong> to estimate π more accurately</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-period">14th–16th Century</div>
+        <div class="card-name">Madhava</div>
+        <ul class="card-contributions">
+          <li>Developed <strong>infinite series expansions</strong> for π and trigonometric functions</li>
+          <li>Predated European calculus developments by centuries</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- NUMBER SYSTEM -->
+  <section id="numbers">
+    <div class="section-label">
+      <span class="section-num">04</span>
+      <div class="section-line"></div>
+    </div>
+    <h2>The Number System</h2>
+    <p>India's development of the <strong>decimal numeral system</strong> is considered one of its greatest intellectual achievements. It is the most widely used number system in the world today.</p>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-date">~2500–1500 BCE</div>
+        <div class="timeline-title">Indus Valley Civilization</div>
+        <div class="timeline-desc">Earliest evidence of numerical symbols for counting and recording quantities.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">~3rd Century BCE</div>
+        <div class="timeline-title">Brahmi Numerals</div>
+        <div class="timeline-desc">Among the earliest written representations of numerical values in India.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">3rd BCE – 3rd CE</div>
+        <div class="timeline-title">Kharosthi Numeral System</div>
+        <div class="timeline-desc">A positional decimal system with symbols for 1–9 and zero; found on inscriptions, coins, and artifacts.</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">4th–6th Century CE</div>
+        <div class="timeline-title">Gupta Numeral System</div>
+        <div class="timeline-desc">Regional numerals used in the Gupta Empire; gradually replaced by the decimal system.</div>
+      </div>
+    </div>
+
+    <div class="key-facts">
+      <div class="key-facts-title">The Decimal System — Why It Won</div>
+      <ul>
+        <li>Uses just <strong>10 symbols (0–9)</strong> to represent all numbers</li>
+        <li><strong>Place-value notation</strong> simplifies all arithmetic</li>
+        <li>Zero as both a <strong>placeholder and a number</strong> — an Indian invention</li>
+        <li>Transmitted to Europe via <strong>Islamic scholars</strong> (Al-Khwarizmi)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PYTHAGORAS -->
+  <section id="pythagoras">
+    <div class="section-label">
+      <span class="section-num">05</span>
+      <div class="section-line"></div>
+    </div>
+    <h2>Pythagorean Theorem in India</h2>
+    <p>The theorem states: in a right-angled triangle, the square of the hypotenuse equals the sum of the squares of the other two sides. While named after the Greek mathematician Pythagoras, evidence shows this knowledge existed in India long before.</p>
+
+    <div class="formula">c² = a² + b²</div>
+
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-period">800–200 BCE</div>
+        <div class="card-name">Sulba Sutras</div>
+        <ul class="card-contributions">
+          <li>Geometry rules for constructing religious altars</li>
+          <li>Demonstrate understanding of right-angled triangle relationships</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-period">Ancient</div>
+        <div class="card-name">Baudhayana & Apastamba</div>
+        <ul class="card-contributions">
+          <li>Geometric methods for constructing right angles</li>
+          <li>Diagonal calculations aligning with Pythagorean principles</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-period">476–550 CE</div>
+        <div class="card-name">Aryabhata</div>
+        <ul class="card-contributions">
+          <li>Discussed relationships between chord lengths and circle radii — related to the theorem</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="key-facts">
+      <div class="key-facts-title">Important Note</div>
+      <ul>
+        <li>The theorem is named after Pythagoras because he is credited with the <strong>first formal proof</strong> in ancient Greece</li>
+        <li>Indian texts demonstrated the <strong>knowledge and application</strong> of the principle without a formal proof</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- VEDIC MATH -->
+  <section id="vedic">
+    <div class="section-label">
+      <span class="section-num">06</span>
+      <div class="section-line"></div>
+    </div>
+    <h2>Vedic Mathematics</h2>
+    <p>A system of mathematical techniques attributed to <strong>Swami Bharati Krishna Tirtha</strong>, who published the book "Vedic Mathematics" in <strong>1965</strong>, claiming the methods are derived from the Vedas.</p>
+
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-name">Sutras</div>
+        <ul class="card-contributions">
+          <li>16 Sutras (aphorisms) and 13 Upa-sutras (sub-sutras)</li>
+          <li>Claimed to cover addition, subtraction, multiplication, division, roots</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-name">Mental Calculation</div>
+        <ul class="card-contributions">
+          <li>Emphasis on fast mental computation</li>
+          <li>Claimed to be faster than traditional methods</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-name">Criticism</div>
+        <ul class="card-contributions">
+          <li>Legitimacy debated among mathematicians and scholars</li>
+          <li>Critics argue techniques are not significantly different from established methods</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-name">Educational Use</div>
+        <ul class="card-contributions">
+          <li>Introduced in some schools as a teaching tool</li>
+          <li>Can help develop mental math speed and accuracy</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- MATHEMATICIANS -->
+  <section id="mathematicians">
+    <div class="section-label">
+      <span class="section-num">07</span>
+      <div class="section-line"></div>
+    </div>
+    <h2>Key Mathematicians</h2>
+    <p>A summary of the most significant figures in ancient Indian mathematics and their defining contributions.</p>
+
+    <table class="summary-table">
+      <thead>
+        <tr>
+          <th>Mathematician</th>
+          <th>Period</th>
+          <th>Key Works</th>
+          <th>Major Contributions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Aryabhata</strong></td>
+          <td>476–550 CE</td>
+          <td>Aryabhatiya</td>
+          <td>π ≈ 3.1416; Sine function; Heliocentric model; Place-value notation</td>
+        </tr>
+        <tr>
+          <td><strong>Varahamihira</strong></td>
+          <td>482–565 CE</td>
+          <td>Brihat-Samhita, Panca-siddhantika</td>
+          <td>Astronomy; Trigonometric identities; Combinatorics; Magic squares</td>
+        </tr>
+        <tr>
+          <td><strong>Brahmagupta</strong></td>
+          <td>598–668 CE</td>
+          <td>Brahmasphutasiddhanta</td>
+          <td>Rules for zero & negatives; Algebra; Cyclic quadrilateral formula; Arithmetic mean</td>
+        </tr>
+        <tr>
+          <td><strong>Bhaskara I</strong></td>
+          <td>600–800 CE</td>
+          <td>Commentary on Aryabhatiya</td>
+          <td>Expanded Aryabhata's work; Sine approximation formula; Planetary astronomy</td>
+        </tr>
+        <tr>
+          <td><strong>Mahaviracharya</strong></td>
+          <td>800–870 CE</td>
+          <td>Ganita Sara Sangraha</td>
+          <td>Number theory; Prime factorization; Continued fractions; Permutations & combinations</td>
+        </tr>
+        <tr>
+          <td><strong>Bhaskaracharya (II)</strong></td>
+          <td>1114–1185 CE</td>
+          <td>Lilavati, Bijaganita, Siddhanta Shiromani</td>
+          <td>Algebra; Calculus ideas (mean value theorem); Calendar reform; Surds</td>
+        </tr>
+        <tr>
+          <td><strong>Baudhayana</strong></td>
+          <td>~6th Century BCE</td>
+          <td>Sulba Sutras commentary</td>
+          <td>Geometry; Algebraic equations; Right-angle constructions</td>
+        </tr>
+        <tr>
+          <td><strong>Kaprekar</strong></td>
+          <td>Modern</td>
+          <td>Kaprekar Constant</td>
+          <td>Discovered the Kaprekar Constant <strong>6174</strong> (1949)</td>
+        </tr>
+        <tr>
+          <td><strong>Ramanujan</strong></td>
+          <td>1887–1920</td>
+          <td>340+ papers</td>
+          <td>Number theory; Elliptic functions; Continued fractions; Infinite series</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Spotlight: Kaprekar's Constant (6174)</h3>
+    <div class="key-facts">
+      <div class="key-facts-title">How it works</div>
+      <ul>
+        <li>Take any <strong>4-digit number</strong> where not all digits are the same</li>
+        <li>Arrange digits in <strong>descending</strong> order, then <strong>ascending</strong> order</li>
+        <li>Subtract the smaller from the larger</li>
+        <li>Repeat — you will always reach <strong>6174</strong> within 7 steps</li>
+      </ul>
+    </div>
+    <div class="formula">
+      e.g. Start: 1234 → 4321 − 1234 = 3087<br>
+      → 8730 − 0378 = 8352 → 8532 − 2358 = <strong>6174</strong>
+    </div>
+
+    <h3>Spotlight: Srinivasa Ramanujan</h3>
+    <div class="callout">
+      <p>An equation for me has no meaning unless it represents a thought of God.</p>
+      <div class="callout-attr">— Srinivasa Ramanujan (1887–1920)</div>
+    </div>
+    <div class="key-facts">
+      <div class="key-facts-title">Fast Facts</div>
+      <ul>
+        <li>Born <strong>22 December 1887</strong> in Erode, Tamil Nadu</li>
+        <li>Wrote to British mathematician <strong>G.H. Hardy</strong> in January 1913</li>
+        <li>Brought to <strong>Cambridge University</strong> in 1916 by Hardy</li>
+        <li>Published more than <strong>340 mathematical papers</strong></li>
+        <li>Film based on his life: <em>"The Man Who Knew Infinity"</em></li>
+        <li><strong>2012</strong> declared National Mathematics Year by the Government of India</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- KERALA SCHOOL -->
+  <section id="kerala">
+    <div class="section-label">
+      <span class="section-num">08</span>
+      <div class="section-line"></div>
+    </div>
+    <h2>The Kerala School of Mathematics</h2>
+    <p>Active between the <strong>14th and 16th centuries CE</strong> in Kerala, this school made extraordinary advances that predated European developments in calculus and infinite series by several centuries.</p>
+
+    <div class="cards-grid">
+      <div class="card">
+        <div class="card-name">Trigonometry</div>
+        <ul class="card-contributions">
+          <li>Infinite series for sine, cosine, tangent</li>
+          <li>Predated European calculus developments</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-name">Astronomy</div>
+        <ul class="card-contributions">
+          <li>Planetary motion models</li>
+          <li>Lunar and solar eclipse predictions</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-name">Key Texts</div>
+        <ul class="card-contributions">
+          <li>Yuktibhāṣā — Jyesthadeva</li>
+          <li>Tantrasangraha — Nilakantha Somayaji</li>
+          <li>Karana Paddhati — Sankara Variar</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-name">Calendar & Legacy</div>
+        <ul class="card-contributions">
+          <li>Calendar reforms via astronomical calculations</li>
+          <li>Built upon Aryabhata, Brahmagupta, and others</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUIZ -->
+  <section id="quiz">
+    <div class="section-label">
+      <span class="section-num">09</span>
+      <div class="section-line"></div>
+    </div>
+    <h2>Quick Self-Test</h2>
+    <p>Click each question to reveal the answer. Test yourself before checking!</p>
+
+    <div class="quiz-container">
+      <div class="quiz-item">
+        <div class="quiz-q" onclick="toggleQ(this)">
+          <span class="quiz-num">Q1</span>
+          Who formally defined zero as a number with its own mathematical properties?
+          <span class="quiz-toggle">Reveal ▾</span>
+        </div>
+        <div class="quiz-a">Brahmagupta (598–668 CE). He introduced rules for arithmetic operations with zero in his work Brahmasphutasiddhanta.</div>
+      </div>
+      <div class="quiz-item">
+        <div class="quiz-q" onclick="toggleQ(this)">
+          <span class="quiz-num">Q2</span>
+          What value did Aryabhata calculate for Pi?
+          <span class="quiz-toggle">Reveal ▾</span>
+        </div>
+        <div class="quiz-a">Aryabhata approximated π ≈ 3.1416, a significant improvement over earlier estimates, in his work Aryabhatiya.</div>
+      </div>
+      <div class="quiz-item">
+        <div class="quiz-q" onclick="toggleQ(this)">
+          <span class="quiz-num">Q3</span>
+          What is the Kaprekar Constant, and who discovered it?
+          <span class="quiz-toggle">Reveal ▾</span>
+        </div>
+        <div class="quiz-a">6174, discovered by D.R. Kaprekar in 1949. Any 4-digit number (not all same digits) will reach 6174 within 7 iterations of subtracting its ascending-digit form from its descending-digit form.</div>
+      </div>
+      <div class="quiz-item">
+        <div class="quiz-q" onclick="toggleQ(this)">
+          <span class="quiz-num">Q4</span>
+          What was the Kerala School's most significant mathematical achievement?
+          <span class="quiz-toggle">Reveal ▾</span>
+        </div>
+        <div class="quiz-a">The discovery of infinite series expansions for trigonometric functions (sine, cosine, tangent), which predated European developments in calculus by several centuries.</div>
+      </div>
+      <div class="quiz-item">
+        <div class="quiz-q" onclick="toggleQ(this)">
+          <span class="quiz-num">Q5</span>
+          What astronomical idea did Aryabhata propose that was centuries ahead of Europe?
+          <span class="quiz-toggle">Reveal ▾</span>
+        </div>
+        <div class="quiz-a">A heliocentric model of the solar system — he correctly stated that the Earth revolves around the Sun.</div>
+      </div>
+      <div class="quiz-item">
+        <div class="quiz-q" onclick="toggleQ(this)">
+          <span class="quiz-num">Q6</span>
+          What is Mahaviracharya's most famous work and what does its title mean?
+          <span class="quiz-toggle">Reveal ▾</span>
+        </div>
+        <div class="quiz-a">"Ganita Sara Sangraha," meaning "Compendium of the Essence of Mathematics." It is a comprehensive treatise covering arithmetic, geometry, algebra, and number theory.</div>
+      </div>
+      <div class="quiz-item">
+        <div class="quiz-q" onclick="toggleQ(this)">
+          <span class="quiz-num">Q7</span>
+          Who is credited with the first formal proof of the Pythagorean Theorem, and why not an Indian mathematician?
+          <span class="quiz-toggle">Reveal ▾</span>
+        </div>
+        <div class="quiz-a">Pythagoras of ancient Greece is credited with the first formal proof. While Indian texts (Sulba Sutras, Baudhayana) demonstrated knowledge and application of the principle, they did not present it as a formal mathematical proof.</div>
+      </div>
+      <div class="quiz-item">
+        <div class="quiz-q" onclick="toggleQ(this)">
+          <span class="quiz-num">Q8</span>
+          How many mathematical papers did Ramanujan publish, and which university did he attend in England?
+          <span class="quiz-toggle">Reveal ▾</span>
+        </div>
+        <div class="quiz-a">Ramanujan published more than 340 papers. He was brought to Cambridge University in 1916 by G.H. Hardy.</div>
+      </div>
+      <div class="quiz-item">
+        <div class="quiz-q" onclick="toggleQ(this)">
+          <span class="quiz-num">Q9</span>
+          What are the Sulba Sutras, and approximately when were they written?
+          <span class="quiz-toggle">Reveal ▾</span>
+        </div>
+        <div class="quiz-a">The Sulba Sutras are ancient Indian texts dealing with geometry for constructing religious altars. They date from approximately 800–200 BCE and contain some of the earliest known geometric knowledge, including Pythagorean-type relationships.</div>
+      </div>
+      <div class="quiz-item">
+        <div class="quiz-q" onclick="toggleQ(this)">
+          <span class="quiz-num">Q10</span>
+          Name the four sections of Bhaskaracharya's Siddhanta Shiromani.
+          <span class="quiz-toggle">Reveal ▾</span>
+        </div>
+        <div class="quiz-a">1. Lilavati (arithmetic & geometry), 2. Bijaganita (algebra), 3. Grahaganita (mathematics of the planets), 4. Goladhyaya (spherical trigonometry).</div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<div class="footer">
+  <div>Mathematics in Ancient India &nbsp;·&nbsp; <span>Unit 1 Study Guide</span></div>
+  <div style="margin-top:8px; opacity:0.6;">5000+ Years of Mathematical Heritage</div>
+</div>
+
+<script>
+  function toggleQ(el) {
+    const ans = el.nextElementSibling;
+    const toggle = el.querySelector('.quiz-toggle');
+    if (ans.classList.contains('open')) {
+      ans.classList.remove('open');
+      toggle.textContent = 'Reveal ▾';
+    } else {
+      ans.classList.add('open');
+      toggle.textContent = 'Hide ▴';
+    }
+  }
+
+  // Smooth scroll for nav
+  document.querySelectorAll('.nav a').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+</script>
+
+</body>
+</html>
