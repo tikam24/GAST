@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>History of Physics in India — Study Guide</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,wght@0,300;0,400;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy:    #0B2545;
+    --teal:    #006D6D;
+    --orange:  #C05A00;
+    --gold:    #B8920A;
+    --cream:   #FAF6EE;
+    --light:   #EEF4F8;
+    --pale:    #F4FBF4;
+    --ink:     #1C1C2E;
+    --muted:   #6B6B80;
+    --border:  #D8E4EE;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--cream); color:var(--ink); font-family:'Source Serif 4',Georgia,serif; font-size:17px; line-height:1.7; }
+
+  /* ── Top band ── */
+  .topband { background:var(--navy); padding:9px 0; text-align:center; font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:4px; color:var(--gold); text-transform:uppercase; }
+
+  /* ── Hero ── */
+  .hero { background:var(--navy); padding:56px 40px 46px; text-align:center; position:relative; overflow:hidden; }
+  .hero::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse at 25% 60%,rgba(0,109,109,.18) 0,transparent 55%),radial-gradient(ellipse at 75% 40%,rgba(192,90,0,.14) 0,transparent 55%); }
+  .hero-label { font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:5px; color:var(--gold); text-transform:uppercase; margin-bottom:18px; position:relative; display:flex; align-items:center; justify-content:center; gap:16px; }
+  .hero-label::before,.hero-label::after { content:''; width:50px; height:1px; background:var(--gold); opacity:.5; }
+  .hero h1 { font-family:'Playfair Display',serif; font-size:clamp(34px,6vw,62px); font-weight:400; color:#fff; letter-spacing:-1px; line-height:1.1; position:relative; }
+  .hero h1 em { font-style:italic; color:var(--gold); }
+  .hero-sub { margin-top:14px; color:var(--muted); font-size:14px; letter-spacing:3px; text-transform:uppercase; font-family:'IBM Plex Mono',monospace; position:relative; }
+  .hero-deco { margin-top:30px; display:flex; align-items:center; justify-content:center; gap:18px; position:relative; }
+  .hline { width:90px; height:1px; background:linear-gradient(to right,transparent,var(--teal)); }
+  .hline.r { background:linear-gradient(to left,transparent,var(--teal)); }
+  .hdot { width:9px; height:9px; border:1px solid var(--teal); transform:rotate(45deg); }
+
+  /* ── Nav ── */
+  .nav { background:#0d1e35; padding:0 36px; display:flex; gap:0; border-bottom:2px solid var(--teal); overflow-x:auto; position:sticky; top:0; z-index:100; }
+  .nav a { color:#9ab8cc; text-decoration:none; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:2px; text-transform:uppercase; padding:13px 18px; white-space:nowrap; transition:color .2s,border-color .2s; border-bottom:2px solid transparent; margin-bottom:-2px; }
+  .nav a:hover { color:var(--gold); border-bottom-color:var(--gold); }
+
+  /* ── Layout ── */
+  .container { max-width:900px; margin:0 auto; padding:0 30px; }
+  section { padding:60px 0 44px; border-bottom:1px solid var(--border); }
+  section:last-child { border-bottom:none; }
+
+  .sec-label { display:flex; align-items:center; gap:14px; margin-bottom:26px; }
+  .sec-num { font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--teal); letter-spacing:3px; }
+  .sec-line { flex:1; height:1px; background:var(--border); }
+
+  h2 { font-family:'Playfair Display',serif; font-size:clamp(26px,4vw,38px); font-weight:600; color:var(--navy); letter-spacing:-.5px; line-height:1.2; margin-bottom:18px; }
+  h3 { font-family:'Playfair Display',serif; font-size:20px; font-weight:600; color:var(--teal); margin:26px 0 10px; }
+  p { color:#2E2E40; margin-bottom:13px; }
+
+  /* ── Info box ── */
+  .box { background:var(--light); border-left:3px solid var(--teal); padding:18px 22px; margin:22px 0; border-radius:0 6px 6px 0; }
+  .box.orange { background:#FFF4EC; border-left-color:var(--orange); }
+  .box.gold { background:#FFFBEC; border-left-color:var(--gold); }
+  .box-title { font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:3px; text-transform:uppercase; color:var(--teal); margin-bottom:10px; }
+  .box.orange .box-title { color:var(--orange); }
+  .box.gold .box-title { color:var(--gold); }
+  .box ul { list-style:none; display:flex; flex-direction:column; gap:7px; }
+  .box li { display:flex; gap:10px; align-items:flex-start; font-size:15.5px; }
+  .box li::before { content:'◆'; color:var(--gold); font-size:8px; margin-top:7px; flex-shrink:0; }
+
+  /* ── Formula ── */
+  .formula { background:var(--navy); color:var(--gold); font-family:'IBM Plex Mono',monospace; font-size:13.5px; padding:16px 22px; border-radius:6px; margin:18px 0; text-align:center; letter-spacing:.5px; line-height:1.8; }
+
+  /* ── Comparison grid ── */
+  .comp-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:0; border:1px solid var(--border); border-radius:8px; overflow:hidden; margin:18px 0; }
+  .comp-head { background:var(--navy); color:var(--gold); font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:2px; padding:12px 14px; text-transform:uppercase; text-align:center; }
+  .comp-head.teal { background:var(--teal); }
+  .comp-head.orange { background:var(--orange); }
+  .comp-cell { padding:11px 14px; font-size:14.5px; border-top:1px solid var(--border); color:#2E2E40; }
+  .comp-cell.label { font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--navy); font-weight:500; background:#F5F9FC; }
+  .comp-cell.teal-bg { background:#F0F8F8; }
+
+  /* ── Scientist cards ── */
+  .sci-card { background:#fff; border:1px solid var(--border); border-radius:10px; overflow:hidden; margin:20px 0; box-shadow:0 2px 12px rgba(11,37,69,.06); }
+  .sci-card-head { background:var(--navy); padding:18px 22px; display:flex; flex-direction:column; gap:4px; }
+  .sci-card-name { font-family:'Playfair Display',serif; font-size:22px; font-weight:700; color:#fff; }
+  .sci-card-meta { font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--gold); letter-spacing:1px; }
+  .sci-card-body { padding:18px 22px; }
+  .sci-card-body p { font-size:15.5px; margin-bottom:10px; }
+  .sci-points { list-style:none; display:flex; flex-direction:column; gap:5px; margin-top:10px; }
+  .sci-points li { font-size:14.5px; color:#2E3040; display:flex; gap:8px; align-items:flex-start; }
+  .sci-points li::before { content:'→'; color:var(--orange); font-size:12px; margin-top:4px; flex-shrink:0; }
+
+  /* ── Electricity types ── */
+  .elec-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:14px; margin:18px 0; }
+  .elec-card { background:#fff; border:1px solid var(--border); border-radius:8px; padding:14px 16px; border-top:3px solid var(--teal); }
+  .elec-name { font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--teal); letter-spacing:2px; margin-bottom:4px; }
+  .elec-sanskrit { font-size:13px; color:var(--muted); margin-bottom:6px; }
+  .elec-desc { font-size:14.5px; color:#2E2E40; }
+
+  /* ── Timeline ── */
+  .timeline { position:relative; margin:20px 0; padding-left:28px; }
+  .timeline::before { content:''; position:absolute; left:6px; top:0; bottom:0; width:1px; background:linear-gradient(to bottom,var(--teal),var(--border)); }
+  .tl-item { position:relative; margin-bottom:24px; }
+  .tl-item::before { content:''; position:absolute; left:-24px; top:7px; width:8px; height:8px; background:var(--teal); border-radius:50%; }
+  .tl-date { font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--teal); letter-spacing:2px; margin-bottom:3px; }
+  .tl-title { font-family:'Playfair Display',serif; font-size:16px; font-weight:600; color:var(--navy); }
+  .tl-desc { font-size:14.5px; color:var(--muted); margin-top:3px; }
+
+  /* ── Sutra boxes ── */
+  .sutra { background:var(--navy); border-radius:8px; padding:18px 22px; margin:14px 0; }
+  .sutra-num { font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:3px; color:var(--gold); margin-bottom:6px; text-transform:uppercase; }
+  .sutra-text { font-family:'IBM Plex Mono',monospace; font-size:13px; color:#A8D8D8; margin-bottom:8px; line-height:1.6; }
+  .sutra-trans { font-size:15px; color:#E0E8F0; font-style:italic; }
+
+  /* ── Quick reference table ── */
+  .ref-table { width:100%; border-collapse:collapse; margin:18px 0; font-size:14px; }
+  .ref-table th { background:var(--navy); color:var(--gold); font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:2px; text-transform:uppercase; padding:11px 14px; text-align:left; }
+  .ref-table td { padding:10px 14px; border-bottom:1px solid var(--border); color:#2E2E40; vertical-align:top; }
+  .ref-table tr:hover td { background:var(--light); }
+  .ref-table tr:nth-child(even) td { background:rgba(255,255,255,.5); }
+
+  /* ── Quiz ── */
+  .quiz-wrap { display:flex; flex-direction:column; gap:14px; margin-top:22px; }
+  .quiz-item { background:#fff; border:1px solid var(--border); border-radius:8px; overflow:hidden; }
+  .quiz-q { padding:14px 18px; font-size:15.5px; color:var(--navy); display:flex; align-items:flex-start; gap:10px; cursor:pointer; user-select:none; transition:background .2s; }
+  .quiz-q:hover { background:var(--light); }
+  .quiz-n { font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--teal); margin-top:3px; flex-shrink:0; }
+  .quiz-tog { margin-left:auto; font-size:11px; color:var(--muted); font-family:'IBM Plex Mono',monospace; flex-shrink:0; }
+  .quiz-a { display:none; padding:12px 18px 14px 38px; background:#F7FBF7; border-top:1px solid var(--border); font-size:15px; color:#2E2E40; }
+  .quiz-a.open { display:block; animation:fadeIn .2s ease; }
+  @keyframes fadeIn { from{opacity:0;transform:translateY(-4px)} to{opacity:1;transform:translateY(0)} }
+
+  /* ── Five elements ── */
+  .elem-grid { display:grid; grid-template-columns:repeat(5,1fr); gap:10px; margin:18px 0; }
+  .elem-card { background:#fff; border:1px solid var(--border); border-radius:8px; padding:14px 10px; text-align:center; border-top:3px solid var(--teal); }
+  .elem-name { font-family:'IBM Plex Mono',monospace; font-size:10px; color:var(--teal); letter-spacing:2px; text-transform:uppercase; margin-bottom:6px; }
+  .elem-state { font-size:13px; color:var(--navy); font-weight:600; margin-bottom:4px; }
+  .elem-note { font-size:12px; color:var(--muted); }
+  .elem-card.special { border-top-color:var(--orange); }
+  .elem-card.special .elem-name { color:var(--orange); }
+
+  /* ── Footer ── */
+  .footer { background:var(--navy); color:var(--muted); text-align:center; padding:36px; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:2px; }
+  .footer span { color:var(--gold); }
+
+  @media(max-width:600px) {
+    .container { padding:0 18px; }
+    .hero { padding:38px 18px; }
+    .nav { padding:0 14px; }
+    .comp-grid { grid-template-columns:1fr; }
+    .elem-grid { grid-template-columns:repeat(3,1fr); }
+    .elec-grid { grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topband">Unit 2 · GAST · History of Physics in India</div>
+
+<div class="hero">
+  <div class="hero-label">Study Guide</div>
+  <h1>History of Physics<br>in <em>Ancient India</em></h1>
+  <div class="hero-sub">From Vedic Wisdom to Modern Science</div>
+  <div class="hero-deco">
+    <div class="hline"></div><div class="hdot"></div><div class="hline r"></div>
+  </div>
+</div>
+
+<nav class="nav">
+  <a href="#atomic">Atomic Theory</a>
+  <a href="#electricity">Electricity</a>
+  <a href="#motion">Laws of Motion</a>
+  <a href="#matter">Matter States</a>
+  <a href="#gravity">Gravitation</a>
+  <a href="#light">Light</a>
+  <a href="#sound">Sound</a>
+  <a href="#scientists">Scientists</a>
+  <a href="#quiz">Quiz</a>
+</nav>
+
+<div class="container">
+
+  <!-- ═══ SECTION 1 — ATOMIC THEORY ═══ -->
+  <section id="atomic">
+    <div class="sec-label"><span class="sec-num">01</span><div class="sec-line"></div></div>
+    <h2>Atomic Theory — Acharya Kanada</h2>
+    <p>Atomic theory was formulated over <strong>2,600 years ago</strong> — more than 2,500 years before John Dalton — by Indian sage and philosopher <strong>Acharya Kanada</strong> (real name: Kashyap). He proposed his ideas in the Sanskrit text <em>Vaisesika Sutra</em> and founded the Vaisheshika School of Philosophy.</p>
+
+    <div class="box">
+      <div class="box-title">Key Facts at a Glance</div>
+      <ul>
+        <li>Kanada lived between the 6th and 2nd centuries BCE (~600–800 BCE)</li>
+        <li>Called atoms "<strong>Anu</strong>" (atom) or "<strong>Paramanu</strong>" (ultimate particle)</li>
+        <li>"<em>Kan</em>" in Sanskrit means the smallest particle — hence the name Kanada</li>
+        <li>Atoms are indestructible, invisible to naked eye, and eternal</li>
+        <li>Atoms of the same substance combine to form <strong>dvyanuka</strong> (diatomic) and <strong>tryanuka</strong> (triatomic) molecules</li>
+        <li>Atoms can combine under heat to produce chemical changes</li>
+        <li>Kanada's theory was likely independent of the ancient Greek atomic theory</li>
+      </ul>
+    </div>
+
+    <h3>Kanada vs Greek Atomic Theory</h3>
+    <div class="comp-grid">
+      <div class="comp-head">Aspect</div>
+      <div class="comp-head teal">Kanada (India)</div>
+      <div class="comp-head orange">Ancient Greeks</div>
+      <div class="comp-cell label">Atomic Differences</div>
+      <div class="comp-cell teal-bg">Atoms differ BOTH qualitatively AND quantitatively</div>
+      <div class="comp-cell">Atoms differ only quantitatively, not qualitatively</div>
+      <div class="comp-cell label">Origin</div>
+      <div class="comp-cell teal-bg">Likely independent development</div>
+      <div class="comp-cell">Developed around same era in parallel</div>
+      <div class="comp-cell label">Examples Given</div>
+      <div class="comp-cell teal-bg">Blackening of earthen pot; ripening of fruit</div>
+      <div class="comp-cell">No specific material examples</div>
+    </div>
+
+    <h3>The Seven Predicables (Padarthas)</h3>
+    <p>Kanada classified all knowable reality into six categories (<em>padartha</em>) — a 7th was added by Vedic scholars in the 10th century:</p>
+    <div class="box">
+      <div class="box-title">Vaisheshika Six (+ One) Predicables</div>
+      <ul>
+        <li><strong>Dravya (Substance)</strong> — Earth, Water, Fire, Air, Ether, Time, Direction, Soul, Mind</li>
+        <li><strong>Guna (Quality)</strong> — Color, Taste, Smell, Touch, Number, Sound, etc.</li>
+        <li><strong>Karma (Action)</strong> — Upward, Downward, Contraction, Expansion, Motion</li>
+        <li><strong>Samanya (Generality)</strong> — Superior and Inferior categories</li>
+        <li><strong>Vishesha (Uniqueness)</strong> — Particularity of each thing</li>
+        <li><strong>Samavaya (Inherence)</strong> — Integration as part of the whole</li>
+        <li><strong>Abhava (Non-existence)</strong> — Added ~10th century CE: Antecedent, Subsequent, Mutual, Absolute</li>
+      </ul>
+    </div>
+
+    <div class="box gold">
+      <div class="box-title">Kanada's Profound Definitions</div>
+      <ul>
+        <li><strong>Life</strong> = an organized form of atoms and molecules</li>
+        <li><strong>Death</strong> = an unorganized form of those atoms and molecules</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══ SECTION 2 — ELECTRICITY ═══ -->
+  <section id="electricity">
+    <div class="sec-label"><span class="sec-num">02</span><div class="sec-line"></div></div>
+    <h2>History of Electricity in Ancient India</h2>
+    <p>Evidence for knowledge of electricity in India dates back to around <strong>10,000–8,000 BCE</strong>. Electricity is explicitly cited in the <strong>5th Mandal of the Rigveda</strong>. Sage Agastya described battery construction in the <em>Agastya Samhita</em> (~8000 BCE).</p>
+
+    <div class="box orange">
+      <div class="box-title">Three Sources of Light and Energy (Rigveda)</div>
+      <ul>
+        <li><strong>1. The Sun</strong> — source of daytime light and energy</li>
+        <li><strong>2. Electricity</strong> — used for illumination and comfort</li>
+        <li><strong>3. Fire inside the Earth</strong> — geothermal energy</li>
+      </ul>
+    </div>
+
+    <h3>The Agastya Samhita Battery (~8000 BCE)</h3>
+    <div class="formula">Earthen Pot + Copper Plate + Mercury + Zinc Powder + Wet Saw Dust
+→ Electric Current (called "Mitra-Varuna Samjnita")
+Compound of Rayi (Positive) + Prana (Negative) = Electricity</div>
+
+    <h3>Six Types of Electricity — Ancient Classification</h3>
+    <div class="elec-grid">
+      <div class="elec-card">
+        <div class="elec-name">TADITA</div>
+        <div class="elec-sanskrit">तडित</div>
+        <div class="elec-desc">Generated by rubbing silk cloths — equivalent to static electricity</div>
+      </div>
+      <div class="elec-card">
+        <div class="elec-name">SAUDAMINI</div>
+        <div class="elec-sanskrit">सौदामिनी</div>
+        <div class="elec-desc">Generated by rubbing two gems</div>
+      </div>
+      <div class="elec-card">
+        <div class="elec-name">VIDYUT</div>
+        <div class="elec-sanskrit">विद्युत</div>
+        <div class="elec-desc">Generated from thunder / lightning</div>
+      </div>
+      <div class="elec-card">
+        <div class="elec-name">SATAKUMBHI</div>
+        <div class="elec-sanskrit">शतकुंभी</div>
+        <div class="elec-desc">Generated by hundred cells of pillars (Kumbhas)</div>
+      </div>
+      <div class="elec-card">
+        <div class="elec-name">HRDANI</div>
+        <div class="elec-sanskrit">हृदनी</div>
+        <div class="elec-desc">Stored electricity with portable properties — like a battery</div>
+      </div>
+      <div class="elec-card">
+        <div class="elec-name">ASANI</div>
+        <div class="elec-sanskrit">अशनी</div>
+        <div class="elec-desc">Generated from magnetic rods</div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="box-title">Electricity in the Mahabharata</div>
+      <ul>
+        <li>Vedavyasa described atmospheric electricity generation in the Mahabharata (Vanaparva 133.26.7)</li>
+        <li><strong>Rayi</strong> = Positive charge; <strong>Prana</strong> = Negative charge</li>
+        <li>Friction between clouds generates electricity; thunder falls due to gravity</li>
+        <li>The Ashtavakra dialogue describes the scientific process of atmospheric electricity — centuries before Benjamin Franklin (1750s)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══ SECTION 3 — LAWS OF MOTION ═══ -->
+  <section id="motion">
+    <div class="sec-label"><span class="sec-num">03</span><div class="sec-line"></div></div>
+    <h2>Laws of Motion — Kanada vs Newton</h2>
+    <p>Rishi Kanada's <em>Vaisheshika Sutra</em> (<strong>600 BCE</strong>) states three fundamental sutras that mirror Newton's three laws of motion — published in 1687 AD. Kanada identified <strong>five types of motion</strong>: Upward, Downward, Release of tensile stress, Shearing stress, and General motion.</p>
+
+    <div class="sutra">
+      <div class="sutra-num">First Sutra — Law of Inertia</div>
+      <div class="sutra-text">वेगः निमित्तविशेषात कर्मणो जायते<br>Vegah Nimitta Visheshat Karmano Jayate</div>
+      <div class="sutra-trans">"Change of motion is due to impressed force."</div>
+    </div>
+    <div class="sutra">
+      <div class="sutra-num">Second Sutra — Law of Force & Acceleration</div>
+      <div class="sutra-text">वेगः निमित्तापेक्षात कर्मणो जायते नियतदिक् क्रियाप्रबन्धहेतु<br>Vegah Nimitta Pekshat Karmano Jayate Niyatdik Kriya Prabandha Hetu</div>
+      <div class="sutra-trans">"Change of motion is proportional to the impressed force and is in the direction of the force."</div>
+    </div>
+    <div class="sutra">
+      <div class="sutra-num">Third Sutra — Law of Action-Reaction</div>
+      <div class="sutra-text">वेगः संयोगविशेषविरोधी<br>Vegah Sanyog Vishesh Virodhi</div>
+      <div class="sutra-trans">"Action and reaction are equal and opposite."</div>
+    </div>
+
+    <h3>Comparison: Newton vs Kanada</h3>
+    <div class="comp-grid">
+      <div class="comp-head">Indicator</div>
+      <div class="comp-head teal">Newton's Law</div>
+      <div class="comp-head orange">Kanada's Sutra</div>
+      <div class="comp-cell label">Time Period</div>
+      <div class="comp-cell teal-bg">1687 AD</div>
+      <div class="comp-cell">~600 BCE</div>
+      <div class="comp-cell label">1st Law</div>
+      <div class="comp-cell teal-bg">Object at rest stays at rest; in motion stays in motion unless acted upon</div>
+      <div class="comp-cell">Change of motion is due to impressed force</div>
+      <div class="comp-cell label">2nd Law</div>
+      <div class="comp-cell teal-bg">Rate of change of momentum ∝ applied force (F = ma)</div>
+      <div class="comp-cell">Change of motion ∝ impressed force, in the direction of force</div>
+      <div class="comp-cell label">3rd Law</div>
+      <div class="comp-cell teal-bg">Every action has equal and opposite reaction</div>
+      <div class="comp-cell">Action and reaction are equal and opposite</div>
+      <div class="comp-cell label">Formulation</div>
+      <div class="comp-cell teal-bg">Mathematical with equations (quantitative)</div>
+      <div class="comp-cell">Sanskrit sutras (qualitative) — Kanada lacked digits</div>
+    </div>
+
+    <div class="box orange">
+      <div class="box-title">Key Distinction</div>
+      <ul>
+        <li>Newton formulated the laws <strong>quantitatively</strong> using mathematical equations</li>
+        <li>Kanada stated the same laws <strong>qualitatively</strong> in Sanskrit sutras ~2,300 years earlier</li>
+        <li>There is no intrinsic difference in meaning between the two</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══ SECTION 4 — MATTER STATES ═══ -->
+  <section id="matter">
+    <div class="sec-label"><span class="sec-num">04</span><div class="sec-line"></div></div>
+    <h2>States of Matter in Indian Philosophy</h2>
+    <p>The Upanishads describe five elements of nature that correspond to modern states of matter — with <em>Akasa</em> representing a state entirely missing from ancient Greek and Roman philosophy.</p>
+
+    <div class="elem-grid">
+      <div class="elem-card">
+        <div class="elem-name">Earth</div>
+        <div class="elem-state">Solid State</div>
+        <div class="elem-note">Fixed shape and volume</div>
+      </div>
+      <div class="elem-card">
+        <div class="elem-name">Water</div>
+        <div class="elem-state">Liquid State</div>
+        <div class="elem-note">Fixed volume, variable shape</div>
+      </div>
+      <div class="elem-card">
+        <div class="elem-name">Air</div>
+        <div class="elem-state">Gaseous State</div>
+        <div class="elem-note">Variable shape and volume</div>
+      </div>
+      <div class="elem-card">
+        <div class="elem-name">Fire</div>
+        <div class="elem-state">Plasma State</div>
+        <div class="elem-note">4th state of matter</div>
+      </div>
+      <div class="elem-card special">
+        <div class="elem-name">Akasa ★</div>
+        <div class="elem-state">Nuclear State</div>
+        <div class="elem-note">Absent from Greek philosophy</div>
+      </div>
+    </div>
+
+    <div class="box orange">
+      <div class="box-title">Significance of Akasa</div>
+      <ul>
+        <li>Akasa (ether/space) was unique to Indian philosophy — Greeks had only 4 elements</li>
+        <li>Akasa corresponds to a nuclear state in which certain nuclear configurations are stable</li>
+        <li>Maharshi Gauthama's <em>Anu Sidhdhantam</em> describes three microscope models for observing atoms and electrons</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══ SECTION 5 — GRAVITATION ═══ -->
+  <section id="gravity">
+    <div class="sec-label"><span class="sec-num">05</span><div class="sec-line"></div></div>
+    <h2>Theory of Gravitation — Bhaskaracharya</h2>
+    <p>Bhaskaracharya (Bhaskara II, 12th century CE) described a comprehensive theory of gravity approximately <strong>1,200 years before Newton</strong>. He stated its principles in <em>Surya Siddhanta</em> and <em>Siddhanta Shiromani</em>.</p>
+
+    <div class="box">
+      <div class="box-title">Bhaskaracharya's Gravitational Principles</div>
+      <ul>
+        <li>Gravity is a <strong>universal force</strong> — every mass attracts every other mass</li>
+        <li>The greater the mass, the greater the gravitational force</li>
+        <li>Objects stay on Earth due to <strong>Gurutvakarshan Shakti</strong> (Earth's gravitational pull)</li>
+        <li>Tidal waves are caused by the Moon's gravitational pull</li>
+        <li>The Sun's gravity keeps all planets in their orbits</li>
+        <li>There is <strong>mutual attraction</strong> between all planets</li>
+        <li>Earth's shape is <strong>spherical</strong>, not flat (explained via the curved circle analogy)</li>
+      </ul>
+    </div>
+
+    <div class="formula">Bhaskaracharya's Calculation of Earth's Orbital Period:
+365.2588 days   (his value)
+365.2563 days   (modern accepted value)
+Difference: only 3.5 minutes!</div>
+
+    <div class="box gold">
+      <div class="box-title">Key Source Texts</div>
+      <ul>
+        <li><strong>Surya Siddhanta</strong> — First principle of gravity; Earth's spherical shape; orbital mechanics</li>
+        <li><strong>Siddhanta Shiromani</strong> — Universal gravitation; orbital stability of planets and stars</li>
+        <li><strong>Lilavati</strong> — Gurutvakarshan Shakti (gravitational force); mutual planetary attraction</li>
+        <li><strong>Karanakuthuhala</strong> — Astronomical calculations; still used for precise calendars today</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══ SECTION 6 — LIGHT ═══ -->
+  <section id="light">
+    <div class="sec-label"><span class="sec-num">06</span><div class="sec-line"></div></div>
+    <h2>Light in Vedic Science</h2>
+    <p>Light holds deep scientific, philosophical, and spiritual significance in Hindu scriptures. The Rigveda contains remarkably modern insights about light's nature, spectrum, and speed.</p>
+
+    <h3>Five Aspects of Light in Hindu Philosophy</h3>
+    <table class="ref-table">
+      <thead><tr><th>Concept</th><th>Sanskrit</th><th>Meaning</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Jyotish</strong></td><td>ज्योतिष</td><td>"Light/Illumination" — Vedic Astrology; celestial light and its effects on human affairs</td></tr>
+        <tr><td><strong>Prakasha</strong></td><td>प्रकाश</td><td>"Illumination" — the illuminating aspect of consciousness; reveals truth</td></tr>
+        <tr><td><strong>Jnana</strong></td><td>ज्ञान</td><td>"Knowledge" — spiritual knowledge that dispels ignorance, as light dispels darkness</td></tr>
+        <tr><td><strong>Surya</strong></td><td>सूर्य</td><td>"Sun" — symbol of knowledge, enlightenment, and consciousness</td></tr>
+        <tr><td><strong>Tejas</strong></td><td>तेजस</td><td>"Radiance/Brilliance" — associated with agni (fire); source of inner energy and illumination</td></tr>
+      </tbody>
+    </table>
+
+    <h3>The Seven Rays of Light — Rigveda (5.45.9)</h3>
+    <div class="box">
+      <div class="box-title">Vedic Description</div>
+      <ul>
+        <li>"<strong>Seven horses draw the chariot of the sun, tied by snakes</strong>" (Rig-Veda 5.45.9)</li>
+        <li><strong>Seven horses</strong> = seven colors of the visible spectrum (VIBGYOR)</li>
+        <li><strong>Snake</strong> = curved/wave path of light propagation</li>
+        <li>The seven colors — Violet, Indigo, Blue, Green, Yellow, Orange, Red — are described in the Yoga Sutras and Vedic Upanishads</li>
+      </ul>
+    </div>
+
+    <h3>Speed of Light — Rigveda (I.50-4)</h3>
+    <div class="formula">Distance = 2202 Yojanas per half-Nimisha
+1 Yojana = 9 miles 110 yards ≈ 21,144.705 miles
+Half-Nimisha = 0.114286 seconds
+─────────────────────────────────────
+Vedic Speed of Light = 185,016 miles/second
+Modern Value         = 186,282.397 miles/second
+Accuracy ≈ 99.3%</div>
+  </section>
+
+  <!-- ═══ SECTION 7 — SOUND ═══ -->
+  <section id="sound">
+    <div class="sec-label"><span class="sec-num">07</span><div class="sec-line"></div></div>
+    <h2>Sound &amp; Acoustics in Vedic Science</h2>
+    <p>In Vedic science, sound (<strong>Nada</strong> and <strong>Shabda</strong>) encompasses both audible and inaudible vibrations — physical and spiritual. This is broader than the modern definition (pressure waves, 20 Hz–20,000 Hz).</p>
+
+    <h3>Two Types of Nada</h3>
+    <div class="comp-grid">
+      <div class="comp-head">Type</div>
+      <div class="comp-head teal">Ahata Naada</div>
+      <div class="comp-head orange">Anahata Naada</div>
+      <div class="comp-cell label">Meaning</div>
+      <div class="comp-cell teal-bg">Struck/produced sound</div>
+      <div class="comp-cell">Unstruck/self-existing sound</div>
+      <div class="comp-cell label">Nature</div>
+      <div class="comp-cell teal-bg">All physical sounds we hear; requires vibratory cause</div>
+      <div class="comp-cell">Transcendental sound; experienced only in deep yoga states</div>
+    </div>
+
+    <h3>Six Acoustical Factors for Vedic Chanting (Taittiriya Upanishat)</h3>
+    <table class="ref-table">
+      <thead><tr><th>Factor</th><th>Sanskrit</th><th>Description</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Varnaha</strong></td><td>वर्णः</td><td>Pronunciation of letters — correct phonetic articulation</td></tr>
+        <tr><td><strong>Svarha</strong></td><td>स्वरः</td><td>Pitch — the tonal quality of each syllable</td></tr>
+        <tr><td><strong>Matra</strong></td><td>मात्रा</td><td>Timing or duration — length of each sound</td></tr>
+        <tr><td><strong>Balam</strong></td><td>बलम्</td><td>Force or intensity of pronunciation</td></tr>
+        <tr><td><strong>Sama</strong></td><td>साम</td><td>Melodious articulation — smooth and pleasant delivery</td></tr>
+        <tr><td><strong>Santanaha</strong></td><td>सन्तानहः</td><td>Combined sound effects — the overall acoustic result</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Four-fold Process of Speech Production</h3>
+    <table class="ref-table">
+      <thead><tr><th>Level</th><th>Chakra Location</th><th>Expression</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Para</strong></td><td>Muladhara (coccygeal region)</td><td>Subtlest — spiritual seed of speech</td></tr>
+        <tr><td><strong>Pashyanti</strong></td><td>Manipuraka (navel region)</td><td>Visual/intuitive level</td></tr>
+        <tr><td><strong>Madhyama</strong></td><td>Anahata (heart region)</td><td>Mental articulation</td></tr>
+        <tr><td><strong>Vaikhari</strong></td><td>Vishuddhi (throat)</td><td>Gross audible speech — what we hear</td></tr>
+      </tbody>
+    </table>
+
+    <h3>The Seven Svaras &amp; Nine Rasas</h3>
+    <div class="box">
+      <div class="box-title">Seven Musical Notes — From Animals in Nature</div>
+      <ul>
+        <li><strong>Sa</strong> — from the Peacock &nbsp;|&nbsp; <strong>Ri</strong> — from the Bull &nbsp;|&nbsp; <strong>Ga</strong> — from the Goat</li>
+        <li><strong>Ma</strong> — from the Curlew &nbsp;|&nbsp; <strong>Pa</strong> — from the Cuckoo</li>
+        <li><strong>Dha</strong> — from the Horse &nbsp;|&nbsp; <strong>Ni</strong> — from the Elephant</li>
+      </ul>
+    </div>
+    <div class="box orange">
+      <div class="box-title">Nine Rasas (Emotional Moods in Music)</div>
+      <ul>
+        <li>Shringaara (amorous) · Veera (heroic) · Karuna (pathetic) · Haasya (comic)</li>
+        <li>Adbhua (marvelous) · Raudra (ferocious) · Bhayanaka (frightening)</li>
+        <li>Bheebhatsa (odious) · Shaanta (peaceful)</li>
+        <li>The emotional effect produced on listeners by these moods is called <strong>Rasa</strong></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ═══ SECTION 8 — SCIENTISTS ═══ -->
+  <section id="scientists">
+    <div class="sec-label"><span class="sec-num">08</span><div class="sec-line"></div></div>
+    <h2>Key Indian Scientists in Physics</h2>
+
+    <div class="sci-card">
+      <div class="sci-card-head">
+        <div class="sci-card-name">Acharya Kanada (Kashyap)</div>
+        <div class="sci-card-meta">~600–800 BCE · Prabhas Kshetra, near Dwaraka, Gujarat · Philosophy &amp; Physics</div>
+      </div>
+      <div class="sci-card-body">
+        <p>Founder of the Vaisheshika School. Originally named Kashyap, he was renamed Kanada ("particle collector") after picking up grains of rice at Prayaga, reasoning that even a single grain has cosmic importance — just as a single atom is fundamental to all matter.</p>
+        <ul class="sci-points">
+          <li>First to propose atomic theory; named atoms "Anu" and "Paramanu"</li>
+          <li>Identified diatomic (dvyanuka) and triatomic (tryanuka) molecules</li>
+          <li>Proposed Gurutva (gravity) as cause of falling objects</li>
+          <li>Formulated three laws of motion analogous to Newton's laws</li>
+          <li>Classified reality into 7 aspects; matter (Dravyam) into 9 sub-aspects</li>
+          <li>Defined life as organized atomic form; death as disorganized form</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sci-card">
+      <div class="sci-card-head">
+        <div class="sci-card-name">Bhaskaracharya (Bhaskara II)</div>
+        <div class="sci-card-meta">1114–1185 CE · Born near Bijapur, Karnataka · Mathematics, Physics, Astronomy</div>
+      </div>
+      <div class="sci-card-body">
+        <p>One of the greatest mathematician-astronomers of the medieval era. Headed the astronomical observatory at Ujjain. Named his first famous work <em>Lilavati</em> after his daughter.</p>
+        <ul class="sci-points">
+          <li>First stated the theory of gravity — ~1,200 years before Newton</li>
+          <li>Calculated Earth's orbital period: 365.2588 days (modern: 365.2563 — error of just 3.5 min)</li>
+          <li>Pioneer of differential calculus — conceived differential coefficient theorem</li>
+          <li>First to state: a finite number divided by zero = infinity</li>
+          <li>Described Earth's spherical shape using mathematical circle analogy</li>
+          <li>Main work: Siddhanta Shiromani (Lilavati, Bijaganita, Grahaganita, Goladhaya)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sci-card">
+      <div class="sci-card-head">
+        <div class="sci-card-name">Aryabhatta</div>
+        <div class="sci-card-meta">476–550 CE · Pataliputra (Bihar) or Kerala · Mathematics &amp; Astronomy</div>
+      </div>
+      <div class="sci-card-body">
+        <p>The earliest known mathematician-astronomer of India. Wrote the <em>Aryabhatiya</em> at age 23 (499 CE). Considered a genius whose theories continue to surprise modern mathematicians.</p>
+        <ul class="sci-points">
+          <li>Invented 'zero' and the place-value decimal system</li>
+          <li>Knew Earth rotates on its axis and revolves around the Sun</li>
+          <li>Calculated circumference of Earth: 39,968 km (modern: 40,072 km)</li>
+          <li>Explained solar and lunar eclipses scientifically</li>
+          <li>Established 365 days as the exact length of the year</li>
+          <li>India's first satellite was named "Aryabhatta" in his honour</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sci-card">
+      <div class="sci-card-head">
+        <div class="sci-card-name">Sir C.V. Raman</div>
+        <div class="sci-card-meta">7 Nov 1888 – 21 Nov 1970 · Tiruchirappalli, Tamil Nadu · Optics, Light Physics</div>
+      </div>
+      <div class="sci-card-body">
+        <p>First Indian scientist to receive the Nobel Prize. Sacrificed a lucrative government career for science. Declined a Cambridge professorship to serve India.</p>
+        <ul class="sci-points">
+          <li>Discovered the <strong>Raman Effect</strong> on 28 February 1928 — scattering of light by molecules</li>
+          <li>Nobel Prize in Physics, 1930 — first Indian Nobel laureate in science</li>
+          <li>28 February observed as <strong>National Science Day</strong> in India</li>
+          <li>Member of Royal Society (1924); Knighthood (1929)</li>
+          <li>Director, Indian Institute of Science, Bangalore (1933)</li>
+          <li>Students included Dr Homi Bhabha and Dr Vikram Sarabhai</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sci-card">
+      <div class="sci-card-head">
+        <div class="sci-card-name">Satyendra Nath Bose</div>
+        <div class="sci-card-meta">1 Jan 1894 – 4 Feb 1974 · Kolkata · Quantum Physics</div>
+      </div>
+      <div class="sci-card-body">
+        <p>Famous for the Bose-Einstein Theory and the class of particles named Bosons after him. His work is connected to the discovery of the Higgs Boson ("God Particle").</p>
+        <ul class="sci-points">
+          <li>Published "Max Planck's Law and Light Quantum Hypothesis" (1924)</li>
+          <li>Einstein translated his paper to German himself — named Bose-Einstein Theory</li>
+          <li>Appointed professor at Dhaka University on Einstein's recommendation</li>
+          <li>Fellow of the Royal Society, London (1958)</li>
+          <li>Awarded Padma Bhushan by Government of India</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sci-card">
+      <div class="sci-card-head">
+        <div class="sci-card-name">Homi Jahangir Bhabha</div>
+        <div class="sci-card-meta">30 Oct 1909 – Jan 1966 · Mumbai · Nuclear Physics, Cosmic Radiation</div>
+      </div>
+      <div class="sci-card-body">
+        <p>The main architect of India's Atomic Energy Programme. Died in a plane crash near Mont Blanc while heading to a meeting of the International Atomic Energy Agency.</p>
+        <ul class="sci-points">
+          <li>Brilliant research on cosmic radiation (1930–39); Fellow of Royal Society at age 31</li>
+          <li>Founded Tata Institute of Fundamental Research (TIFR) — inaugurated December 1945</li>
+          <li>Led India's atomic energy programme for 22 years (1944–1966)</li>
+          <li>Worked under C.V. Raman at IISc Bangalore</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sci-card">
+      <div class="sci-card-head">
+        <div class="sci-card-name">Subrahmanyan Chandrasekhar</div>
+        <div class="sci-card-meta">19 Oct 1910 – 21 Aug 1995 · Lahore · Astrophysics, Stellar Evolution</div>
+      </div>
+      <div class="sci-card-body">
+        <p>Nephew of C.V. Raman. PhD at Cambridge, 1933. Spent his career at the University of Chicago. Nobel Prize in Physics, 1983.</p>
+        <ul class="sci-points">
+          <li>Discovered the <strong>Chandrasekhar Limit</strong> — max mass (~1.44 solar masses) for a white dwarf star</li>
+          <li>His work led to the discovery of neutron stars and black holes</li>
+          <li>Three possible final stages of a star: white dwarf, neutron star, black hole</li>
+          <li>Nobel Prize in Physics, 1983 (jointly with W.A. Fowler)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sci-card">
+      <div class="sci-card-head">
+        <div class="sci-card-name">Vikram Ambalal Sarabhai</div>
+        <div class="sci-card-meta">12 Aug 1919 – 31 Dec 1971 · Ahmedabad · Space Science, Cosmic Rays</div>
+      </div>
+      <div class="sci-card-body">
+        <p>"Father of the Indian Space Programme." Studied under C.V. Raman at IISc. PhD from Cambridge. Died in his sleep at age 52.</p>
+        <ul class="sci-points">
+          <li>Founded <strong>ISRO</strong> (Indian Space Research Organisation)</li>
+          <li>Established India's first rocket launching station, <strong>TERLS in Thumba</strong> (21 November 1963)</li>
+          <li>Established Physical Research Laboratory, Ahmedabad (1947)</li>
+          <li>Pioneer researcher in solar physics and cosmic rays</li>
+          <li>Awarded Shanti Swarup Bhatnagar Medal (1962) and Padma Bhushan (1966)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="sci-card">
+      <div class="sci-card-head">
+        <div class="sci-card-name">Meghnad Saha</div>
+        <div class="sci-card-meta">6 Oct 1893 – 16 Feb 1956 · Near Dhaka, Bangladesh · Astrophysics, Nuclear Physics</div>
+      </div>
+      <div class="sci-card-body">
+        <p>Rose from extreme poverty to become one of India's greatest astrophysicists. Instrumental in building India's scientific institutions.</p>
+        <ul class="sci-points">
+          <li>Developed the <strong>Saha Equation</strong> — describes ionization conditions in stars</li>
+          <li>Fellow of the Royal Society, London (1927)</li>
+          <li>Built India's first cyclotron; introduced nuclear physics in university curriculum</li>
+          <li>Founded Saha Institute of Nuclear Physics (Kolkata, 1943)</li>
+          <li>Chaired India's Calendar Reform Committee (1952) — created the unified national calendar</li>
+          <li>Founded Science and Culture journal; elected Member of Parliament</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>Quick Reference Summary</h3>
+    <table class="ref-table">
+      <thead><tr><th>Scientist</th><th>Period</th><th>Field</th><th>Landmark Achievement</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Acharya Kanada</strong></td><td>~600 BCE</td><td>Atomic Theory</td><td>Atomic theory; Laws of Motion (sutras); gravity concept</td></tr>
+        <tr><td><strong>Aryabhatta</strong></td><td>476–550 CE</td><td>Math & Astronomy</td><td>Zero; heliocentric model; Earth circumference; eclipse explanation</td></tr>
+        <tr><td><strong>Bhaskaracharya</strong></td><td>1114–1185 CE</td><td>Physics & Math</td><td>Gravity theory; differential calculus; 365.2588 day orbital year</td></tr>
+        <tr><td><strong>C.V. Raman</strong></td><td>1888–1970</td><td>Optics</td><td>Raman Effect (1928); Nobel Prize 1930 — first Indian Nobel laureate</td></tr>
+        <tr><td><strong>S.N. Bose</strong></td><td>1894–1974</td><td>Quantum Physics</td><td>Bose-Einstein Theory; Bosons named after him</td></tr>
+        <tr><td><strong>Homi Bhabha</strong></td><td>1909–1966</td><td>Nuclear Physics</td><td>Architect of Indian atomic energy; founded TIFR</td></tr>
+        <tr><td><strong>Chandrasekhar</strong></td><td>1910–1995</td><td>Astrophysics</td><td>Chandrasekhar Limit; Nobel Prize 1983; black hole theory</td></tr>
+        <tr><td><strong>Vikram Sarabhai</strong></td><td>1919–1971</td><td>Space Science</td><td>Father of Indian Space Programme; founded ISRO; TERLS</td></tr>
+        <tr><td><strong>Meghnad Saha</strong></td><td>1893–1956</td><td>Astrophysics</td><td>Saha Equation; cyclotron; calendar reform; institution building</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ═══ SECTION 9 — QUIZ ═══ -->
+  <section id="quiz">
+    <div class="sec-label"><span class="sec-num">09</span><div class="sec-line"></div></div>
+    <h2>Quick Self-Test</h2>
+    <p>Click each question to reveal the answer. Try to recall before checking!</p>
+
+    <div class="quiz-wrap">
+      <div class="quiz-item">
+        <div class="quiz-q" onclick="toggleQ(this)"><span class="quiz-n">Q1</span>Who first proposed atomic theory, and approximately when?<span class="quiz-tog">Reveal ▾</span></div>
+        <div class="quiz-a">Acharya Kanada (~600–800 BCE), in his Vaisesika Sutras — over 2,500 years before John Dalton.</div>
+      </div>
+      <div class="quiz-item">
+        <div class="quiz-q" onclick="toggleQ(this)"><span class="quiz-n">Q2</span>What are dvyanuka and tryanuka?<span class="quiz-tog">Reveal ▾</span></div>
+        <div class="quiz-a">Dvyanuka = diatomic molecule (two atoms of the same substance combined). Tryanuka = triatomic molecule (three atoms combined).</div>
+      </div>
+      <div class="quiz-item">
+        <div class="quiz-q" onclick="toggleQ(this)"><span class="quiz-n">Q3</span>Name the six types of electricity classified in ancient India.<span class="quiz-tog">Reveal ▾</span></div>
+        <div class="quiz-a">TADITA (rubbing silk), SAUDAMINI (rubbing gems), VIDYUT (thunder), SATAKUMBHI (hundred cells), HRDANI (stored/portable), ASANI (magnetic rods).</div>
+      </div>
+      <div class="quiz-item">
+        <div class="quiz-q" onclick="toggleQ(this)"><span class="quiz-n">Q4</span>What are "Rayi" and "Prana" in ancient physics?<span class="quiz-tog">Reveal ▾</span></div>
+        <div class="quiz-a">Rayi = Positive electric charge. Prana = Negative electric charge. Their compound state is collectively called Electricity.</div>
+      </div>
+      <div class="quiz-item">
+        <div class="quiz-q" onclick="toggleQ(this)"><span class="quiz-n">Q5</span>State Kanada's Third Sutra and its Newton equivalent.<span class="quiz-tog">Reveal ▾</span></div>
+        <div class="quiz-a">"Vegah Sanyog Vishesh Virodhi" — Action and reaction are equal and opposite. This is equivalent to Newton's Third Law of Motion.</div>
+      </div>
+      <div class="quiz-item">
+        <div class="quiz-q" onclick="toggleQ(this)"><span class="quiz-n">Q6</span>How did Bhaskaracharya describe the Earth's shape?<span class="quiz-tog">Reveal ▾</span></div>
+        <div class="quiz-a">He said Earth is spherical, not flat. Analogy: if you draw a very big circle and look at one-fourth of its circumference, it appears as a straight line — but it is actually circular. Similarly, Earth is spherical.</div>
+      </div>
+      <div class="quiz-item">
+        <div class="quiz-q" onclick="toggleQ(this)"><span class="quiz-n">Q7</span>What was Bhaskaracharya's calculation of Earth's orbital period, and how close is it?<span class="quiz-tog">Reveal ▾</span></div>
+        <div class="quiz-a">365.2588 days. The modern accepted measurement is 365.2563 days — a difference of only 3.5 minutes.</div>
+      </div>
+      <div class="quiz-item">
+        <div class="quiz-q" onclick="toggleQ(this)"><span class="quiz-n">Q8</span>What does the Rigveda verse "Seven horses draw the chariot of the sun" describe scientifically?<span class="quiz-tog">Reveal ▾</span></div>
+        <div class="quiz-a">The seven horses represent the seven colors of the visible light spectrum (VIBGYOR). The snake symbolizes the curved/wave path of light propagation.</div>
+      </div>
+      <div class="quiz-item">
+        <div class="quiz-q" onclick="toggleQ(this)"><span class="quiz-n">Q9</span>What speed of light is calculated from the Rigveda?<span class="quiz-tog">Reveal ▾</span></div>
+        <div class="quiz-a">~185,016 miles/second (2202 Yojanas per half-Nimisha). Modern value is 186,282.397 miles/second — the Vedic calculation is about 99.3% accurate.</div>
+      </div>
+      <div class="quiz-item">
+        <div class="quiz-q" onclick="toggleQ(this)"><span class="quiz-n">Q10</span>What is the Raman Effect and when was it discovered?<span class="quiz-tog">Reveal ▾</span></div>
+        <div class="quiz-a">The scattering of light by molecules (inelastic scattering). Discovered by C.V. Raman on 28 February 1928. This day is observed as National Science Day in India.</div>
+      </div>
+      <div class="quiz-item">
+        <div class="quiz-q" onclick="toggleQ(this)"><span class="quiz-n">Q11</span>What is the Chandrasekhar Limit and what did it lead to?<span class="quiz-tog">Reveal ▾</span></div>
+        <div class="quiz-a">The maximum mass (~1.44 solar masses) a white dwarf star can have. Stars exceeding this limit collapse further — leading to the discovery of neutron stars and black holes.</div>
+      </div>
+      <div class="quiz-item">
+        <div class="quiz-q" onclick="toggleQ(this)"><span class="quiz-n">Q12</span>Who founded ISRO and is called "Father of the Indian Space Programme"?<span class="quiz-tog">Reveal ▾</span></div>
+        <div class="quiz-a">Dr Vikram Sarabhai. He also established TERLS (India's first rocket launching station, 21 November 1963) and the Physical Research Laboratory, Ahmedabad.</div>
+      </div>
+      <div class="quiz-item">
+        <div class="quiz-q" onclick="toggleQ(this)"><span class="quiz-n">Q13</span>What is the Saha Equation and who developed it?<span class="quiz-tog">Reveal ▾</span></div>
+        <div class="quiz-a">Developed by Meghnad Saha. It describes the chemical and physical conditions (ionization states) in stellar atmospheres, fundamental to astrophysics.</div>
+      </div>
+      <div class="quiz-item">
+        <div class="quiz-q" onclick="toggleQ(this)"><span class="quiz-n">Q14</span>Name the four-fold process of speech production in Vedic science, with chakra locations.<span class="quiz-tog">Reveal ▾</span></div>
+        <div class="quiz-a">Para (Muladhara/coccygeal), Pashyanti (Manipuraka/navel), Madhyama (Anahata/heart), Vaikhari (Vishuddhi/throat — audible speech).</div>
+      </div>
+      <div class="quiz-item">
+        <div class="quiz-q" onclick="toggleQ(this)"><span class="quiz-n">Q15</span>Why is the element Akasa significant in Indian physics?<span class="quiz-tog">Reveal ▾</span></div>
+        <div class="quiz-a">Akasa corresponds to the nuclear state of matter — a state not recognized by ancient Greek or Roman philosophers. It represents the fifth element, unique to Indian philosophy.</div>
+      </div>
+      <div class="quiz-item">
+        <div class="quiz-q" onclick="toggleQ(this)"><span class="quiz-n">Q16</span>What connected Satyendra Nath Bose to Albert Einstein?<span class="quiz-tog">Reveal ▾</span></div>
+        <div class="quiz-a">Bose sent his 1924 paper "Max Planck's Law and Light Quantum Hypothesis" to Einstein, who was so impressed he translated it into German himself and sent it for publication. The theory was named Bose-Einstein Theory.</div>
+      </div>
+      <div class="quiz-item">
+        <div class="quiz-q" onclick="toggleQ(this)"><span class="quiz-n">Q17</span>What are the nine Rasas (emotional moods) in Indian classical music?<span class="quiz-tog">Reveal ▾</span></div>
+        <div class="quiz-a">Shringaara (amorous), Veera (heroic), Karuna (pathetic), Haasya (comic), Adbhua (marvelous), Raudra (ferocious), Bhayanaka (frightening), Bheebhatsa (odious), Shaanta (peaceful).</div>
+      </div>
+      <div class="quiz-item">
+        <div class="quiz-q" onclick="toggleQ(this)"><span class="quiz-n">Q18</span>Why was Kanada's formulation of the laws of motion qualitative rather than quantitative?<span class="quiz-tog">Reveal ▾</span></div>
+        <div class="quiz-a">Because digits were not yet invented in Kanada's time (zero was invented by Aryabhata; infinity by Bhaskaracharya, both later). Without a proper number system, Kanada could only state the laws in qualitative verbal/sutra form.</div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<div class="footer">
+  <div>History of Physics in India &nbsp;·&nbsp; <span>Unit 2 Study Guide</span></div>
+  <div style="margin-top:8px;opacity:.6">Ancient Wisdom · Classical Science · Modern Pioneers</div>
+</div>
+
+<script>
+  function toggleQ(el) {
+    const a = el.nextElementSibling;
+    const t = el.querySelector('.quiz-tog');
+    if (a.classList.contains('open')) {
+      a.classList.remove('open'); t.textContent = 'Reveal ▾';
+    } else {
+      a.classList.add('open'); t.textContent = 'Hide ▴';
+    }
+  }
+  document.querySelectorAll('.nav a').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      const t = document.querySelector(a.getAttribute('href'));
+      if (t) t.scrollIntoView({ behavior:'smooth', block:'start' });
+    });
+  });
+</script>
+</body>
+</html>
